@@ -32,6 +32,10 @@ public class MessageAdapter extends BaseAdapter {
         this.mItems = items;
     }
 
+    public void setItems(List items) {
+        this.mItems = items;
+    }
+
     @Override
     public int getCount() {
         return mItems.size();
@@ -63,7 +67,7 @@ public class MessageAdapter extends BaseAdapter {
             convertView.setTag(viewHolder);
         }
 
-        viewHolder.profile.setImageResource(message.getImage());
+        viewHolder.profile.setImageDrawable(message.getImage());
         viewHolder.name.setText(message.getName());
         viewHolder.message.setText(message.getMessage());
         viewHolder.hour.setText(message.getHour());

@@ -1,19 +1,24 @@
 package com.theandroiddeveloper.viewholderpattern.adapter.model;
 
+import android.graphics.drawable.Drawable;
+
+/**
+ * @author jonatan.salas
+ */
 public class Message {
-    private int image;
+    private Drawable image;
     private String name;
     private String message;
     private String hour;
 
     public Message() {}
 
-    public Message setImage(int image) {
+    public Message setImage(Drawable image) {
         this.image = image;
         return this;
     }
 
-    public int getImage() {
+    public Drawable getImage() {
         return image;
     }
 
