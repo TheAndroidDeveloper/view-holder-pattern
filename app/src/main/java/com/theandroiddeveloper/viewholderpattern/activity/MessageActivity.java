@@ -5,7 +5,9 @@ import android.os.Bundle;
 
 import com.theandroiddeveloper.viewholderpattern.R;
 
-/***
+/**
+ * Main application activity.
+ *
  * @author jonatan.salas
  */
 public class MessageActivity extends AppCompatActivity {

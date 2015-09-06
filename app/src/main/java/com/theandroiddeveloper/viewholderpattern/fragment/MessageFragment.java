@@ -15,13 +15,14 @@ import com.theandroiddeveloper.viewholderpattern.adapter.MessageAdapter;
 import com.theandroiddeveloper.viewholderpattern.helper.MessageHelper;
 
 /**
+ *  Fragment class that represents the message app UI.
+ *
  *  @author jonatan.salas
  */
 public class MessageFragment extends Fragment implements AbsListView.OnScrollListener {
-    FloatingActionButton mFloatingButton;
-    MessageHelper mMessageHelper;
-    MessageAdapter mAdapter;
-    ListView mListView;
+    private FloatingActionButton mFloatingButton;
+    private MessageHelper mMessageHelper;
+    private MessageAdapter mAdapter;
 
     public MessageFragment() {}
 
@@ -30,15 +31,15 @@ public class MessageFragment extends Fragment implements AbsListView.OnScrollLis
         final View view = inflater.inflate(R.layout.fragment_message, container, false);
 
         mFloatingButton = (FloatingActionButton) view.findViewById(R.id.fab);
-        mListView = (ListView) view.findViewById(R.id.list);
+        final ListView listView = (ListView) view.findViewById(R.id.list);
 
         mMessageHelper = new MessageHelper(getContext());
         mAdapter = new MessageAdapter(getContext(), mMessageHelper.getActualMessages());
 
         if(!mAdapter.isEmpty())
-            mListView.setAdapter(mAdapter);
+            listView.setAdapter(mAdapter);
 
-        mListView.setOnScrollListener(this);
+        listView.setOnScrollListener(this);
 
         return view;
     }

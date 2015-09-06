@@ -15,6 +15,8 @@ import com.theandroiddeveloper.viewholderpattern.adapter.model.Message;
 import java.util.List;
 
 /**
+ * Custom adapter class
+ *
  * @author jonatan.salas
  */
 public class MessageAdapter extends BaseAdapter {
@@ -22,9 +24,10 @@ public class MessageAdapter extends BaseAdapter {
     private List mItems;
 
     /**
+     * Constructor with parameters
      *
-     * @param context
-     * @param items
+     * @param context - the context where the adapter is going to be used.
+     * @param items - the list of items that the adapter must represent.
      */
     public MessageAdapter(@NonNull final Context context,
                           @NonNull final List items) {
@@ -53,7 +56,6 @@ public class MessageAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final Message message = (Message) getItem(position);
         final ViewHolder viewHolder;
 
         if(null != convertView) {
@@ -67,15 +69,29 @@ public class MessageAdapter extends BaseAdapter {
             convertView.setTag(viewHolder);
         }
 
-        viewHolder.profile.setImageDrawable(message.getImage());
-        viewHolder.name.setText(message.getName());
-        viewHolder.message.setText(message.getMessage());
-        viewHolder.hour.setText(message.getHour());
+        onBindViews(viewHolder, position);
 
         return convertView;
     }
 
     /**
+     * Method that bind views with the data to be shown.
+     *
+     * @param viewHolder - the viewHolder used to set the data.
+     * @param position - the position where of the data to get.
+     */
+    private void onBindViews(@NonNull final ViewHolder viewHolder, final int position) {
+        final Message message = (Message) getItem(position);
+
+        viewHolder.profile.setImageDrawable(message.getImage());
+        viewHolder.name.setText(message.getName());
+        viewHolder.message.setText(message.getMessage());
+        viewHolder.hour.setText(message.getHour());
+    }
+
+    /**
+     * ViewHolder class used for caching the views needed by our adapter.
+     *
      * @author jonatan.salas
      */
     protected static class ViewHolder {
@@ -85,8 +101,9 @@ public class MessageAdapter extends BaseAdapter {
         private TextView hour;
 
         /**
+         * Constructor with parameters.
          *
-         * @param view
+         * @param view - The root view that contains all the views needed.
          */
         public ViewHolder(@NonNull final View view) {
             profile = (ImageView) view.findViewById(R.id.profile_picture);
