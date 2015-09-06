@@ -1,10 +1,8 @@
 package com.theandroiddeveloper.viewholderpattern.helper;
 
 import android.content.Context;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 
 import com.theandroiddeveloper.viewholderpattern.R;
 import com.theandroiddeveloper.viewholderpattern.adapter.model.Message;
