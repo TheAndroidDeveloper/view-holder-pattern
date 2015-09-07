@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 
 import com.theandroiddeveloper.viewholderpattern.R;
-import com.theandroiddeveloper.viewholderpattern.adapter.model.Message;
+import com.theandroiddeveloper.viewholderpattern.adapter.model.MessageContent;
 import com.theandroiddeveloper.viewholderpattern.util.DrawableUtil;
 
 import java.util.ArrayList;
@@ -39,79 +39,79 @@ public class MessageHelper {
      * @return a hardcoded list of messages.
      */
     public List getActualMessages() {
-        List<Message> messageList = new ArrayList<>();
-        Message[] messages = new Message[] {
-                new Message()
+        List<MessageContent> messageList = new ArrayList<>();
+        MessageContent[] messages = new MessageContent[] {
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("John Doe")
                         .setMessage("Hey, How are you?")
                         .setHour("22:20"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("John")
                         .setMessage("What about you?")
                         .setHour("20:12"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Johnny")
                         .setMessage("I´m fine, thanks.")
                         .setHour("19:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Larry")
                         .setMessage("Still programming? ")
                         .setHour("01:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Manuel")
                         .setMessage("Man, what we do tonight?")
                         .setHour("23:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("John Doe")
                         .setMessage("Hey, How are you?")
                         .setHour("22:20"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("John")
                         .setMessage("What about you?")
                         .setHour("20:12"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Johnny")
                         .setMessage("I´m fine, thanks.")
                         .setHour("19:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Larry")
                         .setMessage("Still programming? ")
                         .setHour("01:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Manuel")
                         .setMessage("Man, what we do tonight?")
                         .setHour("23:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("John Doe")
                         .setMessage("Hey, How are you?")
                         .setHour("22:20"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("John")
                         .setMessage("What about you?")
                         .setHour("20:12"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Johnny")
                         .setMessage("I´m fine, thanks.")
                         .setHour("19:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Larry")
                         .setMessage("Still programming? ")
                         .setHour("01:25"),
-                new Message()
+                new MessageContent()
                         .setImage(mDrawable)
                         .setName("Manuel")
                         .setMessage("Man, what we do tonight?")

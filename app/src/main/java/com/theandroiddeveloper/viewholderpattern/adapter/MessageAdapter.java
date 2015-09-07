@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.theandroiddeveloper.viewholderpattern.R;
-import com.theandroiddeveloper.viewholderpattern.adapter.model.Message;
+import com.theandroiddeveloper.viewholderpattern.adapter.model.MessageContent;
 
 import java.util.List;
 
@@ -81,12 +81,12 @@ public class MessageAdapter extends BaseAdapter {
      * @param position - the position where of the data to get.
      */
     private void onBindViews(@NonNull final ViewHolder viewHolder, final int position) {
-        final Message message = (Message) getItem(position);
+        final MessageContent content = (MessageContent) getItem(position);
 
-        viewHolder.profile.setImageDrawable(message.getImage());
-        viewHolder.name.setText(message.getName());
-        viewHolder.message.setText(message.getMessage());
-        viewHolder.hour.setText(message.getHour());
+        viewHolder.profile.setImageDrawable(content.getImage());
+        viewHolder.name.setText(content.getName());
+        viewHolder.message.setText(content.getMessage());
+        viewHolder.hour.setText(content.getHour());
     }
 
     /**

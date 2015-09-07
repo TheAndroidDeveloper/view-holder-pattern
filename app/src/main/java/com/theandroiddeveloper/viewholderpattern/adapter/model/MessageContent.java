@@ -7,17 +7,17 @@ import android.graphics.drawable.Drawable;
  *
  * @author jonatan.salas
  */
-public class Message {
+public class MessageContent {
     private Drawable image;
     private String name;
     private String message;
     private String hour;
 
     /** Default Constructor **/
-    public Message() {}
+    public MessageContent() {}
 
     /**  Attribute setters && getters **/
-    public Message setImage(Drawable image) {
+    public MessageContent setImage(Drawable image) {
         this.image = image;
         return this;
     }
@@ -26,7 +26,7 @@ public class Message {
         return image;
     }
 
-    public Message setName(String name) {
+    public MessageContent setName(String name) {
         this.name = name;
         return this;
     }
@@ -35,7 +35,7 @@ public class Message {
         return name;
     }
 
-    public Message setMessage(String message) {
+    public MessageContent setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -44,7 +44,7 @@ public class Message {
         return message;
     }
 
-    public Message setHour(String hour) {
+    public MessageContent setHour(String hour) {
         this.hour = hour;
         return this;
     }
